@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,14 +8,24 @@
     android:background="@drawable/ic_splash_background"
     tools:context=".SplashActivity">
 
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="199dp"
+        android:layout_height="228dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/owl_splash_logo" />
+
     <TextView
         android:id="@+id/tv_app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="S"
-        android:textColor="@android:color/white"
+        android:layout_below="@id/logoImageView"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="ROBOT"
+        android:textColor="@android:color/black"
         android:textSize="@dimen/splash_screen_title_text_size"
         android:textStyle="bold" />
 
-</LinearLayout>
+</RelativeLayout>

@@ -28,7 +28,7 @@ class SplashActivity : AppCompatActivity() {
         }
         setContentView(view)
 
-        val typeFace: Typeface = Typeface.createFromAsset(assets, "Owl.ttf")
+        val typeFace: Typeface = Typeface.createFromAsset(assets, "Cracker Winter.ttf")
         binding.tvAppName.typeface = typeFace
     }
 }
