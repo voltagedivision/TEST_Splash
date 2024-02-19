@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#FFFF00</color>
+    <color name="colorPrimaryDark">#00FFF2</color>
+    <color name="colorAccent">#E500FF</color>
+    
+    <color name="primary_text_color">#FF000000</color>
+    <color name="secondary_text_color">#18FF00</color>
+
+    <color name="snackbar_error_color">#F72440</color>
 </resources>

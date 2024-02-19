@@ -1,14 +1,14 @@
-package com.example.test_splash
+package com.example.test_splash.activities
 
+import android.content.Intent
 import android.graphics.Typeface
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.WindowInsets
 import android.view.WindowManager
-import android.view.inputmethod.InputBinding
-import androidx.annotation.RequiresApi
-import android.widget.TextView
 import com.example.test_splash.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {
@@ -30,5 +30,10 @@ class SplashActivity : AppCompatActivity() {
 
         val typeFace: Typeface = Typeface.createFromAsset(assets, "Cracker Winter.ttf")
         binding.tvAppName.typeface = typeFace
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(Intent(this, IntroActivity::class.java))
+            finish() // kill SplashActivity so user cannot go back here
+        }, 2500) // start IntroActivity after 2.5 seconds
     }
 }
