@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "705913347011",
+    "project_id": "red-owl-book-organization-tool",
+    "storage_bucket": "red-owl-book-organization-tool.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705913347011:android:5cb2284d21b3654bdcbb76",
+        "android_client_info": {
+          "package_name": "com.example.test_splash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6RI79QFHEQVdCWIYt82MfFx5H9pDfRoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

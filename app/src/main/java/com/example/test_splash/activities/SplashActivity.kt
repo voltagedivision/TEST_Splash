@@ -10,6 +10,7 @@ import android.os.Looper
 import android.view.WindowInsets
 import android.view.WindowManager
 import com.example.test_splash.databinding.ActivitySplashBinding
+import com.example.test_splash.firebase.FirestoreClass
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
@@ -32,7 +33,16 @@ class SplashActivity : AppCompatActivity() {
         binding.tvAppName.typeface = typeFace
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, IntroActivity::class.java))
+
+            var currentUserID = FirestoreClass().getCurrentUserID()
+
+            if(currentUserID.isNotEmpty()){
+                startActivity(Intent(this, MainActivity::class.java))
+            }
+            else{
+                startActivity(Intent(this, IntroActivity::class.java))
+            }
+
             finish() // kill SplashActivity so user cannot go back here
         }, 2500) // start IntroActivity after 2.5 seconds
     }
